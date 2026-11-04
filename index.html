@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4f3">
+  <title>For Ade❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <div class="floating-decor decor-one">♡</div>
+    <div class="floating-decor decor-two">✦</div>
+    <div class="floating-decor decor-three">♡</div>
+
+    <section id="main-container" class="window-card" aria-live="polite">
+      <header class="window-bar">
+        <span id="window-title">FROM AA</span>
+        <div class="window-dots" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </div>
+      </header>
+
+      <div class="window-content">
+        <!-- 1. Amplop pembuka -->
+        <section id="page-envelope" class="page page-envelope">
+          <div class="hero-art" aria-hidden="true">
+            <span class="hero-spark">✦</span>
+            <span class="hero-heart">💌</span>
+            <span class="hero-bow">💘</span>
+          </div>
+          <p class="eyebrow">A LITTLE SURPRISE</p>
+          <h1>From AA Kece Badai<br>Special For Adek💕</h1>
+          <p class="page-hint">Ada sesatu buat adek nihh...</p>
+          <button class="btn-primary" type="button" onclick="nextPage('page-question')">
+            Buka surat <span aria-hidden="true">♥</span>
+          </button>
+        </section>
+
+        <!-- 2. Pertanyaan -->
+        <section id="page-question" class="page hidden">
+          <p class="eyebrow">P E T I S I</p>
+          <h2>Jadi jalan-jalan<br>bareng aa ga?</h2>
+          <div class="question-art" aria-hidden="true">
+            <span>🐱</span><span class="art-heart">❤️</span>
+          </div>
+          <p class="page-hint">Pilih jawaban yang paling kamu suka hehe</p>
+          <div class="button-pair">
+            <button class="btn-primary" type="button" onclick="nextPage('page-date')">YES! 💗</button>
+            <button id="btn-no" class="btn-secondary" type="button" onmouseenter="moveNo()" onclick="moveNo()">NO</button>
+          </div>
+        </section>
+
+        <!-- 3. Tanggal dan jam -->
+        <section id="page-date" class="page hidden">
+          <p class="eyebrow">DATE PLANNER · 01/04</p>
+          <h2>Kapan nih<br>adek waktu luang nya?</h2>
+          <div class="form-fields">
+            <label for="date-input">📅 Tanggal kencan</label>
+            <input type="date" id="date-input">
+            <label for="time-input">⏰ Jam berapa?</label>
+            <input type="time" id="time-input" value="16:00">
+          </div>
+          <button class="btn-primary" type="button" onclick="continueWithDate()">Lanjut <span>→</span></button>
+        </section>
+
+      
+        <!-- 4. Aktivitas -->
+        <section id="page-activity" class="page hidden">
+        <p class="eyebrow">DATE PLANNER · 02/04</p>
+        <h2>Nanti kita<br>mau ngapain?</h2>
+        <p class="page-hint">Pilih maksimal 3 aktivitas yang adek suka ❤️</p>
+
+        <div class="choice-grid">
+            <label class="choice-card">
+            <input type="checkbox" name="activity"
+                value="Nonton Film, Main Game, Ngerumpi" checked>
+            <span class="choice-icon">🎬</span>
+            <span>Nonton &<br>Main Game</span>
+            </label>
+
+            <label class="choice-card">
+            <input type="checkbox" name="activity" value="Dinner Romantis">
+            <span class="choice-icon">🍽️</span>
+            <span>Dinner<br>Romantis</span>
+            </label>
+
+            <label class="choice-card">
+            <input type="checkbox" name="activity" value="Jalan-jalan & Kulineran">
+            <span class="choice-icon">🛍️</span>
+            <span>Jalan &<br>Kuliner</span>
+            </label>
+
+            <label class="choice-card">
+            <input type="checkbox" name="activity" value="Santai di Cafe / Ngobrol">
+            <span class="choice-icon">☕</span>
+            <span>Cafe Date</span>
+            </label>
+        </div>
+
+        <button class="btn-primary" type="button"
+            onclick="nextPage('page-dresscode')">
+            Lanjut <span>→</span>
+        </button>
+        </section>
+
+
+        <!-- 5. Dress code -->
+        <section id="page-dresscode" class="page hidden">
+          <p class="eyebrow">DATE PLANNER · 03/04</p>
+          <h2>Pakai outfit<br>gimana ?</h2>
+          <div class="choice-grid dress-grid">
+            <label class="choice-card">
+              <input type="radio" name="dresscode" value="Bebas" checked>
+              <span class="choice-icon">👕</span><span>Bebas</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="dresscode" value="Casual Couple">
+              <span class="choice-icon">🥼🥼</span><span>Casual Couple</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="dresscode" value="Formal / Rapi">
+              <span class="choice-icon">👗</span><span>Formal</span>
+            </label>
+              <label class="choice-card">
+              <input type="radio" name="dresscode" value="berkabung">
+              <span class="choice-icon">🧥</span><span>Setelan Ngelayat</span>
+            </label>
+             </label>
+              <label class="choice-card">
+              <input type="radio" name="dresscode" value="picnic/weekend date">
+              <span class="choice-icon">👘</span><span>Korean Sweet & Minimalist</span>
+            </label>
+             </label>
+              <label class="choice-card">
+              <input type="radio" name="dresscode" value="Arcade Date">
+              <span class="choice-icon">👖👔</span><span>Edgy Street Smart</span>
+            </label>
+          </div>
+          <button class="btn-primary" type="button" onclick="nextPage('page-message')">Lanjut <span>→</span></button>
+        </section>
+
+        <!-- 6. Pesan -->
+        <section id="page-message" class="page hidden">
+          <p class="eyebrow">DATE PLANNER · 04/04</p>
+          <h2>Ada pesan<br>buat aku ?</h2>
+          <p class="page-hint">Tulis pesan kecil yang mau disampaikan.</p>
+          <textarea id="custom-message" rows="3" maxlength="180" placeholder="Contoh: Jangan telat ya! Aku tunggu ❤️"></textarea>
+          <button class="btn-primary" type="button" onclick="generateTicket()">Bikin tiketnya ✨</button>
+        </section>
+
+        <!-- 7. Tiket hasil -->
+        <section id="page-result" class="page hidden">
+          <p class="eyebrow">OFFICIALLY A DATE</p>
+          <h2>Yeay, it's a date! 🎉</h2>
+          <div id="ticket-card" class="ticket-card">
+            <div class="ticket-heading">
+              <span>♥</span>
+              <strong>TIKET KENCAN SPESIAL</strong>
+              <span>♥</span>
+            </div>
+            <p><b>👤 Pengirim</b><span id="res-sender">Kamu</span></p>
+            <p><b>📅 Kapan</b><span><span id="res-date">-</span>, <span id="res-time">16:00</span></span></p>
+            <p><b>🎬 Aktivitas</b><span id="res-activity">-</span></p>
+            <p><b>👗 Dress code</b><span id="res-dress">-</span></p>
+            <p class="ticket-message"><b>💬 Pesan</b><span id="res-msg">-</span></p>
+            <div class="ticket-footer">MADE WITH LOVE · SEE YOU SOON!</div>
+          </div>
+          <button class="btn-primary" type="button" onclick="downloadTicket()">📥 Simpan tiket (PNG)</button>
+          <button class="btn-whatsapp" type="button" onclick="sendWhatsApp()">💬 Kirim ke WhatsApp</button>
+          <button class="text-button" type="button" onclick="restartPlanner()">Buat ulang</button>
+        </section>
+      </div>
+     
+        <footer class="window-footer">
+        <span>MADE WITH ♡ JUST FOR YOU</span>
+
+        <p class="footer-note">*Nyalain musiknya yaa biar enjoy, tekan ▶</p>
+        <button id="music-toggle" type="button" onclick="toggleMusic()">
+            ♫ Putar Musik
+        </button>
+        </footer>
+
+        <audio id="background-music" loop preload="none">
+        <source src="./minefields.mp3" type="audio/mpeg">
+        </audio>
+
+    </section>
+    <p class="outside-note">a tiny page, with a big feeling ♡</p>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
