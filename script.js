@@ -173,7 +173,7 @@ Jangan lupa datang yaa!
 Adek udah nggak sabar buat ketemu AA. 🥰
 
 See you, my favorite person! 💗`;
-  const phone = "6285163232115";
+  const phone = "6285165565720";
   const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
 
 
