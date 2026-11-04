@@ -135,16 +135,49 @@ async function downloadTicket() {
   }
 }
 
-function sendWhatsApp() {
-  const date = document.getElementById("res-date").textContent;
-  const time = document.getElementById("res-time").textContent;
-  const activity = document.getElementById("res-activity").textContent;
-  const dress = document.getElementById("res-dress").textContent;
-  const message = document.getElementById("res-msg").textContent;
 
-  const text = `Halo! Aku udah buat tiket kencannya nih ✨\n\n📅 Tanggal: ${date} (Pukul ${time})\n🎬 Aktivitas: ${activity}\n👗 Dress Code: ${dress}\n💬 Pesan: ${message}\n\nYuk jalan bareng! ❤️`;
-  const url = `https://wa.me/?text=${encodeURIComponent(text)}`;
-  window.open(url, "_blank", "noopener,noreferrer");
+function sendWhatsApp() {
+  const date = document.getElementById("res-date").textContent.trim();
+  const time = document.getElementById("res-time").textContent.trim();
+  const activity = document.getElementById("res-activity").textContent.trim();
+  const dress = document.getElementById("res-dress").textContent.trim();
+  const message = document.getElementById("res-msg").textContent.trim();
+
+  const text = `💕 AA sayanggg!
+
+Adek udah siapin sesuatu buat kita nih...
+Tiket kencan spesial dari adek! 🥺💗
+
+╭────── ⋆｡°✩ ──────╮
+       💌 OUR DATE PLAN
+╰────── ⋆｡°✩ ──────╯
+
+📅 Hari/Tanggal
+${date}
+
+⏰ Waktu
+${time}
+
+🎀 Aktivitas
+${activity}
+
+👗 Dress Code
+${dress}
+
+💬 Pesan dari adek
+"${message}"
+
+━━━━━━━━━━━━━━
+
+Jangan lupa datang yaa!
+Adek udah nggak sabar buat ketemu AA. 🥰
+
+See you, my favorite person! 💗`;
+  const phone = "6285163232115";
+  const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+
+
+  window.open(url, "_blank");
 }
 
 
